@@ -27,11 +27,12 @@ public class jouet {
         this.prix = prix * ( 1 + pourcentage / 100);
     }
 
-    public static void intervertirCategories(jouet jouet1, jouet jouet2) {
-        int tempCategorie = jouet1.getCategorie();
-        jouet1.setCategorie(jouet2.getCategorie());
-        jouet2.setCategorie(tempCategorie);
+    public void diminuer(double pourcentage)
+    {
+        this.prix = prix * (1 - pourcentage/100);
     }
+
+
 
     public int getCategorie() {
         return this.categorie;
